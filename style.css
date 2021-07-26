@@ -1,0 +1,110 @@
+:root {
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed";
+  background-color: var(--Light-grayish-blue);
+  margin: 0px;
+  min-width: 100vh;
+  box-sizing: border-box;
+}
+
+main {
+  padding: 164px;
+  width: auto;
+  height: auto;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 04px 24px;
+  grid-template-areas:
+    "box1 box1 box2 box3"
+    "box4 box5 box5 box3";
+}
+.box1 {
+  grid-area: box1;
+  background-color: var(--Moderate-violet);
+  color: var(--Light-gray);
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position-x: 362px;
+  background-position-y: 24px;
+}
+.box3 {
+  grid-area: box3;
+  background-color: var(--White);
+  color: var(--Very-dark-grayish-blue);
+}
+.box2 {
+  grid-area: box2;
+  background-color: var(--Very-dark-grayish-blue);
+  color: var(--White);
+}
+.box4 {
+  grid-area: box4;
+  background-color: var(--White);
+  color: var(--Very-dark-grayish-blue);
+}
+.box5 {
+  grid-area: box5;
+  background-color: var(--Very-dark-blackish-blue);
+  color: var(--White);
+}
+
+.testimonial {
+  padding: 24px 29px;
+}
+
+.testimonial-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-right: 15px;
+}
+
+.info {
+  display: inline-block;
+}
+
+.testimonial-name {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.testimonial-title {
+  font-size: 12px;
+  opacity: 50%;
+  margin: 0px;
+}
+
+.testimonial-excerpt {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.testimonial-quotation {
+  font-size: 13px;
+}
+
+@media only screen and (max-width: 1118px) {
+  body {
+    overflow-x: hidden;
+  }
+  .testimonials {
+    display: flex;
+    flex-direction: column;
+  }
+}
